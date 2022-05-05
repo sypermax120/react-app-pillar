@@ -1,0 +1,96 @@
+.resort{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+  
+     &__text{
+       max-width: 560px;
+       width: 100%;
+       font-weight: 400;
+       font-size: 30px;
+       line-height: 35px;
+       margin-bottom: 40px;
+  
+       & h3{
+         padding-bottom: 20px;
+       }
+  
+       & ul{
+         list-style: none;
+         & li{
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+         }
+       }
+  
+       &__icon{
+        width: 65px;
+        height: 65px;
+        background-size: 60%;
+        background-color: #D8E8FD;
+        border-radius: 50%;
+        padding: 10px;
+        margin-right: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+       & .pool{
+         background-image: url('../image/pool.png');
+       }
+       & .beach{
+         background-image: url('../image/beach.png');
+       }
+       & .surprise{
+          background-image: url('../image/surprise.png');
+       }
+       & .activities{
+         background-image: url('../image/activities.png');
+       }
+     }
+  
+     &__image{
+        max-width: 560px;
+        width: 100%;
+  
+       &__main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../image/resort.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        margin: 0 auto;
+        background-position: center;
+        padding: 30% 0;
+        box-shadow: 1px 172px 52px rgba(214, 228, 232, 0.25), -58px 160px 52px #D6E4E8;
+  
+        &__play{
+          background-image: url('../image/play.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 200px;
+          height: 200px;
+        }
+       }
+  
+       &__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        &__circle{
+          text-align: center;
+          padding: 25px 0;
+  
+          & img{
+            margin: 0 10px;
+          }
+        }
+       }
+     }
+  }

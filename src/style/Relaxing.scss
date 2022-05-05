@@ -1,0 +1,35 @@
+.relaxing{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+  
+     &__text{
+       max-width: 390px;
+       width: 100%;
+       line-height: 22px;
+  
+       & h2{
+         padding-bottom: 20px;
+       }
+       & p{
+         padding-bottom: 20px
+       }
+     }
+  
+     &__image{
+      max-width: 700px;
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+  
+      & img{
+        padding: 10px;
+      }
+     }
+  }

@@ -1,0 +1,26 @@
+.main_logo{
+  min-height: 500px;
+  height: 100%;
+  background-image: url("../image/main_logo.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+
+  &__gradient{
+    min-height: 500px;
+    height: 100%;
+    background: linear-gradient(90deg, #B3E8BE 28.27%, rgba(227, 227, 227, 0) 86.66%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  &__text{
+    margin-left: 10%;
+
+    & span:first-child{
+      font-weight: 700;
+      font-size: 55px;
+    }
+  }
+}

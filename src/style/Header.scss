@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    height: 136px;
+  
+    &__logo{
+      width: 50%;
+      font-weight: 700;
+      font-size: 25px;
+      align-self: center;
+      & a{
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+
+    &__menu{
+      width: 50%;
+      font-weight: 600;
+      font-size: 17px;
+      align-self: center;
+  
+      & ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        & a{
+          list-style-type: none;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__login{
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 5px 15px !important;
+    }
+  }
