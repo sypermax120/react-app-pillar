@@ -10,8 +10,7 @@ export const tourSlice = createSlice({
     initialState,
     reducers: {
         onAdd: (state, action) => {
-            let id = state.tours.length+1
-            action.payload.id = id
+            action.payload.id = (state.tours.length+1.).toString()
             state.tours = [...state.tours, action.payload];
         },
 

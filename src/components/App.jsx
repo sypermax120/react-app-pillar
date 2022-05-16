@@ -8,13 +8,13 @@ import Relaxing from './Relaxing';
 import Woman from './Woman';
 import Footer from './Footer';
 
-function App({users, setUsers, setAuthUser, authUser}) {
+function App() {
   // console.log(props);
 
   return (
     <div className="App">
       <section className='App__first'>
-        <Header users={users} setUsers={setUsers} setAuthUser={setAuthUser} authUser={authUser}/>
+        <Header />
         <MainLogo />
         <FacilitiesBlock />
         <CityBlock />

@@ -1,8 +1,11 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useDispatch } from 'react-redux';
+import { createUser } from '../../reducers/userReducer';
 
-const Register = ({users, setUsers}) => {
-        // console.log('Register', props)
+
+const Register = () => {
+    const dispatch = useDispatch();
 
     let newUser = {
         id: null,
@@ -10,12 +13,6 @@ const Register = ({users, setUsers}) => {
         secondName: '',
         mail: '',
         pass: ''
-    }
-    
-    const createUser = ()=>{
-        users.push(newUser)
-        setUsers(users)
-        // console.log(props);
     }
 
     return(
@@ -32,7 +29,7 @@ const Register = ({users, setUsers}) => {
         <Form.Group className="mb-3 Password" controlId="formBasicPassword">
             <Form.Control type="password" placeholder="Password" onChange={e => (newUser.pass= e.target.value )}/>
         </Form.Group>
-        <Button variant="primary" type="reset" onClick={createUser}>Regiter</Button>
+        <Button variant="primary" type="reset" onClick={() => {dispatch(createUser(newUser))}}>Regiter</Button>
     </Form>
     );
 }

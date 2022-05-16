@@ -6,7 +6,6 @@ import Register from "./Register";
 import Login from "./Login";
 
 const Registration = (props) => {
-        // console.log(props)
 
         return (
         <Modal
@@ -23,10 +22,10 @@ const Registration = (props) => {
             <Modal.Body>
                 <Tabs defaultActiveKey="Login" id="uncontrolled-tab-example" className="mb-3">
                     <Tab eventKey="Login" title="Log in">
-                        <Login users={props.users} setAuthUser={props.setAuthUser}/>
+                        <Login />
                     </Tab>
                     <Tab eventKey="Register" title="Register">
-                        <Register users={props.users} setUsers={props.setUsers}/>
+                        <Register />
                     </Tab>
                 </Tabs>
             </Modal.Body>

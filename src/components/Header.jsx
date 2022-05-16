@@ -1,13 +1,16 @@
 import{ Link } from 'react-router-dom';
 import { useState } from 'react';
 import Registration from './registration/Registration';
+import { useSelector, useDispatch } from 'react-redux';
+import { exitUser } from '../reducers/userReducer';
 
 
-const Header = ({users, setUsers, setAuthUser, authUser}) =>{
-    // console.log(props)
+const Header = () =>{
     const [modalShow, setModalShow] = useState(false);
     // const user = ""
-    
+    const authUser = useSelector((state) => state.user.authUser);
+    const dispatch = useDispatch();
+
     return(
         <header className='header'>
             <div className="header__logo"><Link to='../'>ProjName</Link></div>
@@ -18,8 +21,9 @@ const Header = ({users, setUsers, setAuthUser, authUser}) =>{
                     <Link to='../tours'><li>Tours</li></Link>
                     <Link to='../contact'><li>Contact</li></Link>
                     {
-                        authUser ? (<Link to='../admin'><li>{authUser}</li></Link>) : (<div><li className='header__login' onClick={() => setModalShow(true)}>Login</li>
-                        <Registration users={users} setUsers={setUsers} setAuthUser={setAuthUser} show={modalShow} onHide={() => setModalShow(false)}/></div>)
+                        authUser ? (<Link to='../admin'><div><li>{authUser}</li><li className='header__login' onClick={() => {dispatch(exitUser())}}>Exit</li></div></Link>) 
+                        : (<div><li className='header__login' onClick={() => setModalShow(true)}>Login</li>
+                        <Registration show={modalShow} onHide={() => setModalShow(false)}/></div>)
                     }
                 </ul>
             </nav>

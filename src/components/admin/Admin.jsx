@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { useSelector, useDispatch } from 'react-redux';
 import { onAdd, sortByPrice, onDeleteTour } from '../../reducers/tourReducer';
 
-const Admin = ({authUser}) => {
+const Admin = () => {
 
     const dispatch = useDispatch();
     const tours = useSelector((state) => state.tour.tours);
@@ -21,7 +21,7 @@ const Admin = ({authUser}) => {
     return(
     <div className='App'>
         <div className='App__first'>
-            <Header authUser={authUser}/>
+            <Header />
             <div className="change-tour">
                 <h1>Admin menu</h1>
                 <div className="add-tour">

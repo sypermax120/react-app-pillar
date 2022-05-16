@@ -3,13 +3,13 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-const Tours = ({authUser}) =>{
+const Tours = () =>{
     const tours = useSelector((state) => state.tour.tours);
     
     return(
     <div className='App'>
         <div className='App__first'>
-            <Header authUser={authUser}/>
+            <Header />
             <div className='tours'>
                 {tours.map((tour)=>
                     <Card style={{ width: '18rem' }}>
