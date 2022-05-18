@@ -1,32 +1,34 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { tourData } from "../mock/tours";
+import { createSlice } from '@reduxjs/toolkit';
+import { tourData } from '../mock/tours';
 
 const initialState = {
-    tours: []
+  tours: [],
 };
 
 export const tourSlice = createSlice({
-    name: 'tour',
-    initialState,
-    reducers: {
-        onAdd: (state, action) => {
-            action.payload.id = (state.tours.length+1.).toString()
-            state.tours = [...state.tours, action.payload];
-        },
+  name: 'tour',
+  initialState,
+  reducers: {
+    onAdd: (state, action) => {
+      action.payload.id = (state.tours.length + 1.0).toString();
+      state.tours = [...state.tours, action.payload];
+    },
 
-        fetchTours: (state) => {
-            state.tours = tourData
-        },
+    fetchTours: (state) => {
+      state.tours = tourData;
+    },
 
-        sortByPrice: (state) => {
-            state.tours = state.tours.sort((a, b) => a.price - b.price);
-        },
+    sortByPrice: (state) => {
+      state.tours = state.tours.sort((a, b) => a.price - b.price);
+    },
 
-        onDeleteTour: (state, action) => {
-            state.tours = state.tours.filter(tour => tour.id !== action.payload);
-        }
-    }
-})
+    onDeleteTour: (state, action) => {
+      state.tours = state.tours.filter((tour) => tour.id !== action.payload);
+    },
+  },
+});
 
-export const { onAdd, fetchTours, sortByPrice, onDeleteTour } = tourSlice.actions;
+export const {
+  onAdd, fetchTours, sortByPrice, onDeleteTour,
+} = tourSlice.actions;
 export default tourSlice.reducer;

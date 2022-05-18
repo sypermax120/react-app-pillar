@@ -1,7 +1,8 @@
 import '../style/App.scss';
+import { React } from 'react';
 import Header from './Header';
 import MainLogo from './MainLogo';
-import FacilitiesBlock from './FacilitiesBlock'
+import FacilitiesBlock from './FacilitiesBlock';
 import CityBlock from './CityBlock';
 import Resort from './Resort';
 import Relaxing from './Relaxing';
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <section className='App__first'>
+      <section className="App__first">
         <Header />
         <MainLogo />
         <FacilitiesBlock />
@@ -22,11 +23,11 @@ function App() {
         <Relaxing />
       </section>
 
-      <section className='App__middle'>
+      <section className="App__middle">
         <Woman />
       </section>
 
-      <section className='App__bottom'>
+      <section className="App__bottom">
         <Footer />
       </section>
     </div>
