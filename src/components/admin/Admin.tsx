@@ -1,14 +1,16 @@
-import { React, useSelector, useDispatch } from 'react-redux';
+import React, { useSelector, useDispatch } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { onAdd, sortByPrice, onDeleteTour } from '../../reducers/tourReducer';
 import Header from '../Header';
+import { RootState } from '../../mock/store';
+import { ItourData } from '../../mock/tours';
 
 function Admin() {
   const dispatch = useDispatch();
-  const tours = useSelector((state) => state.tour.tours);
-  const authUser = useSelector((state) => state.user.authUser);
+  const tours = useSelector((state: RootState) => state.tour.tours);
+  const authUser = useSelector((state: RootState) => state.user.authUser);
 
   const newTour = {
     id: null,
@@ -29,13 +31,13 @@ function Admin() {
                     <div className="add-tour">
                       <Form>
                         <Form.Group className="mb-3 Name" controlId="formBasicEmail">
-                          <Form.Control type="text" placeholder="Name" onChange={(e) => (newTour.name = e.target.value)} />
+                          <Form.Control type="text" placeholder="Name" onChange={(e) => { newTour.name = e.target.value; }} />
                         </Form.Group>
                         <Form.Group className="mb-3 Price" controlId="formBasicPassword">
-                          <Form.Control type="number" placeholder="Price" onChange={(e) => (newTour.price = e.target.value)} />
+                          <Form.Control type="number" placeholder="Price" onChange={(e) => { newTour.price = e.target.value; }} />
                         </Form.Group>
                         <Form.Group className="mb-3 Description" controlId="formBasicCheckbox">
-                          <Form.Control type="text" placeholder="Description" onChange={(e) => (newTour.description = e.target.value)} />
+                          <Form.Control type="text" placeholder="Description" onChange={(e) => { newTour.description = e.target.value; }} />
                         </Form.Group>
                         <Form.Group className="mb-3 add-sort">
                           <Button variant="primary" type="reset" onClick={() => { dispatch(onAdd(newTour)); }}>Add Tour</Button>
@@ -44,7 +46,7 @@ function Admin() {
                       </Form>
                     </div>
                     <div className="dell-tours">
-                      {tours.map((tour) => (
+                      {tours.map((tour: ItourData) => (
                         <Card style={{ width: '18rem' }}>
                           <Card.Img variant="top" src="https://img.rozavitriv.com/3/540x370/00/00/16/63/166325.jpg" />
                           <Card.Body>
@@ -64,7 +66,7 @@ function Admin() {
                     </div>
                   </div>
 
-                ) : (<div style={{ 'text-align': 'center' }}>page not found</div>)
+                ) : (<div>page not found</div>)
             }
 
       </div>

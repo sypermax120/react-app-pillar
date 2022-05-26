@@ -1,3 +1,11 @@
+export interface ItourData{
+  id: string,
+  name: string,
+  price: number,
+  description: string,
+  pets: boolean
+}
+
 export const tourData = [
   {
     id: '1',

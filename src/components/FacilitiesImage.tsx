@@ -1,6 +1,6 @@
-import { React } from 'react';
+import React from 'react';
 
-function FacilitiesImage({ props }) {
+function FacilitiesImage({ props }: any) {
   const {
     logo,
     text,

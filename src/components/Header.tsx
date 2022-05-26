@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Registration from './registration/Registration';
 import { exitUser } from '../reducers/userReducer';
+import { RootState } from '../mock/store';
 
 function Header() {
   const [modalShow, setModalShow] = useState(false);
-  const authUser = useSelector((state) => state.user.authUser);
+  const authUser = useSelector((state: RootState) => state.user.authUser);
   const dispatch = useDispatch();
 
   return (
@@ -23,13 +24,13 @@ function Header() {
                           <Link to="../admin">
                             <div>
                               <li>{authUser}</li>
-                              <li className="header__login" onClick={() => { dispatch(exitUser()); }}>Exit</li>
+                              <li className="header__login" onClick={() => { dispatch(exitUser()); setModalShow(false); }} aria-hidden="true">Exit</li>
                             </div>
                           </Link>
                         )
                           : (
                             <div>
-                              <li className="header__login" onClick={() => setModalShow(true)}>Login</li>
+                              <li className="header__login" onClick={() => setModalShow(true)} aria-hidden="true">Login</li>
                               <Registration show={modalShow} onHide={() => setModalShow(false)} />
                             </div>
                           )

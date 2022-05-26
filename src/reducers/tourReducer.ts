@@ -9,21 +9,21 @@ export const tourSlice = createSlice({
   name: 'tour',
   initialState,
   reducers: {
-    onAdd: (state, action) => {
+    onAdd: (state: any, action) => {
       action.payload.id = (state.tours.length + 1.0).toString();
       state.tours = [...state.tours, action.payload];
     },
 
-    fetchTours: (state) => {
+    fetchTours: (state: any) => {
       state.tours = tourData;
     },
 
     sortByPrice: (state) => {
-      state.tours = state.tours.sort((a, b) => a.price - b.price);
+      state.tours = state.tours.sort((a: any, b: any) => a.price - b.price);
     },
 
     onDeleteTour: (state, action) => {
-      state.tours = state.tours.filter((tour) => tour.id !== action.payload);
+      state.tours = state.tours.filter((tour: any) => tour.id !== action.payload);
     },
   },
 });

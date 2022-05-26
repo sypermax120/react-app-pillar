@@ -1,18 +1,20 @@
-import { React } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Header from '../Header';
+import { RootState } from '../../mock/store';
+import { ItourData } from '../../mock/tours';
 
 function Tours() {
-  const tours = useSelector((state) => state.tour.tours);
+  const tours = useSelector((state : RootState) => state.tour.tours);
 
   return (
     <div className="App">
       <div className="App__first">
         <Header />
         <div className="tours">
-          {tours.map((tour) => (
+          {tours.map((tour: ItourData) => (
             <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src="https://img.rozavitriv.com/3/540x370/00/00/16/63/166325.jpg" />
               <Card.Body>

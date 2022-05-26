@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -19,8 +20,8 @@ module.exports = {
     'react',
   ],
   rules: {
-    'import/prefer-default-export': 'on',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'import/prefer-default-export': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx', '.js', '.jsx'] }],
     'react/prop-types': [0],
     'no-param-reassign': [2, { props: false }],
   },

@@ -14,7 +14,7 @@ export const userSlice = createSlice({
       state.authUser = '';
     },
 
-    fetchUsers: (state) => {
+    fetchUsers: (state: any) => {
       state.users = userData;
     },
 
@@ -22,14 +22,13 @@ export const userSlice = createSlice({
       state.authUser = action.payload;
     },
 
-    createUser: (state, action) => {
+    createUser: (state: any, action) => {
       action.payload.id = state.users.length + 1;
       state.users = [...state.users, action.payload];
     },
 
-    loginUser: (state, action) => {
-      console.log(state.authUser);
-      state.authUser = state.users.find((user) => user.mail === action.payload.mail
+    loginUser: (state: any, action) => {
+      state.authUser = state.users.find((user: any) => user.mail === action.payload.mail
       && user.pass === action.payload.pass).mail;
     },
   },

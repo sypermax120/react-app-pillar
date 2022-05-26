@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import ellipse22 from '../image/ellipse22.png';
 import ellipse23 from '../image/ellipse23.png';
 import ellipse24 from '../image/ellipse24.png';

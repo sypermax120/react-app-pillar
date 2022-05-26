@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import HotelCard from './HotelCard';
 import entireimg from '../image/entire_img.png';
 

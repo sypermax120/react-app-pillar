@@ -1,5 +1,5 @@
 import '../style/App.scss';
-import { React } from 'react';
+import React from 'react';
 import Header from './Header';
 import MainLogo from './MainLogo';
 import FacilitiesBlock from './FacilitiesBlock';
@@ -10,8 +10,6 @@ import Woman from './Woman';
 import Footer from './Footer';
 
 function App() {
-  // console.log(props);
-
   return (
     <div className="App">
       <section className="App__first">

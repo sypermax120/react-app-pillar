@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import hotelsBtnLogo from '../image/hotels_btn_logo.png';
 import ellipse31 from '../image/ellipse31.png';
 import ellipse32 from '../image/ellipse32.png';

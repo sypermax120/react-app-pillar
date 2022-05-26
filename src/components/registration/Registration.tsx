@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Tab from 'react-bootstrap/Tab';
@@ -6,7 +6,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import Register from './Register';
 import Login from './Login';
 
-function Registration(props) {
+function Registration(props: any) {
   return (
     <Modal
       {...props}

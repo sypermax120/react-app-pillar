@@ -1,6 +1,6 @@
-import { React } from 'react';
+import React from 'react';
 
-function HotelCard({ props }) {
+function HotelCard({ props }: any) {
   const {
     price,
     id,
