@@ -1,7 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { userData } from '../mock/users';
+import { IuserData } from '../mock/users';
 
-const initialState = {
+interface tourReducer {
+  users: Array<IuserData>,
+  authUser: string
+}
+
+const initialState: tourReducer = {
   users: [],
   authUser: '',
 };
@@ -14,7 +20,7 @@ export const userSlice = createSlice({
       state.authUser = '';
     },
 
-    fetchUsers: (state: any) => {
+    fetchUsers: (state) => {
       state.users = userData;
     },
 
@@ -22,13 +28,13 @@ export const userSlice = createSlice({
       state.authUser = action.payload;
     },
 
-    createUser: (state: any, action) => {
+    createUser: (state, action) => {
       action.payload.id = state.users.length + 1;
       state.users = [...state.users, action.payload];
     },
 
     loginUser: (state: any, action) => {
-      state.authUser = state.users.find((user: any) => user.mail === action.payload.mail
+      state.authUser = state.users.find((user: IuserData) => user.mail === action.payload.mail
       && user.pass === action.payload.pass).mail;
     },
   },

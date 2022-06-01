@@ -1,3 +1,11 @@
+export interface IuserData{
+  id: number,
+  firstName: string,
+  secondName: string,
+  mail: string,
+  pass: string
+}
+
 export const userData = [
   {
     id: 1,
