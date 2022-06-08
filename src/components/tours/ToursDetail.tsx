@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Header from '../Header';
+import Header from '../main/Header';
 import { RootState } from '../../mock/store';
 import { ItourData } from '../../mock/tours';
 

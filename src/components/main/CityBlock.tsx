@@ -1,6 +1,6 @@
 import React from 'react';
 import HotelCard from './HotelCard';
-import entireimg from '../image/entire_img.png';
+import entireimg from '../../image/entire_img.png';
 
 function CityBlock() {
   const cityCards = [

@@ -1,10 +1,10 @@
 import React from 'react';
-import ellipse25 from '../image/ellipse25.png';
-import ellipse26 from '../image/ellipse26.png';
-import ellipse27 from '../image/ellipse27.png';
-import ellipse28 from '../image/ellipse28.png';
-import ellipse29 from '../image/ellipse29.png';
-import ellipse30 from '../image/ellipse30.png';
+import ellipse25 from '../../image/ellipse25.png';
+import ellipse26 from '../../image/ellipse26.png';
+import ellipse27 from '../../image/ellipse27.png';
+import ellipse28 from '../../image/ellipse28.png';
+import ellipse29 from '../../image/ellipse29.png';
+import ellipse30 from '../../image/ellipse30.png';
 
 function Woman() {
   return (

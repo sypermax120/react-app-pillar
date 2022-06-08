@@ -1,7 +1,7 @@
 import React from 'react';
-import relaxing1 from '../image/relaxing1.png';
-import relaxing2 from '../image/relaxing2.png';
-import relaxing3 from '../image/relaxing3.png';
+import relaxing1 from '../../image/relaxing1.png';
+import relaxing2 from '../../image/relaxing2.png';
+import relaxing3 from '../../image/relaxing3.png';
 
 function Relaxing() {
   return (

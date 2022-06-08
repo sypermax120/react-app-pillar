@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { tourData } from '../mock/tours';
-import { ItourData } from '../mock/tours';
+import { tourData, ItourData } from '../mock/tours';
 
-interface tourReducer {
-  tours: Array<ItourData>
-  }
+interface ItourReducer {
+  tours: Array<ItourData>,
+  searchValue: any,
+}
 
-const initialState: tourReducer = {
+const initialState: ItourReducer = {
   tours: [],
+  searchValue: {},
 };
 
 export const tourSlice = createSlice({
@@ -30,10 +31,20 @@ export const tourSlice = createSlice({
     onDeleteTour: (state, action) => {
       state.tours = state.tours.filter((tour) => tour.id !== action.payload);
     },
+
+    onChangeValue: (state, action) => {
+      state.searchValue[action.payload.name] = action.payload.value;
+    },
+
+    filterTours: (state) => {
+      const temp = [...tourData.filter((tour) => tour.price >= state.searchValue.priceFrom
+        && tour.price <= state.searchValue.priceTo)];
+      state.tours = temp;
+    },
   },
 });
 
 export const {
-  onAdd, fetchTours, sortByPrice, onDeleteTour,
+  onAdd, fetchTours, sortByPrice, onDeleteTour, onChangeValue, filterTours,
 } = tourSlice.actions;
 export default tourSlice.reducer;

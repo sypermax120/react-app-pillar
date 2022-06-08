@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { onAdd, sortByPrice, onDeleteTour } from '../../reducers/tourReducer';
-import Header from '../Header';
+import Header from '../main/Header';
 import { RootState } from '../../mock/store';
 import { ItourData } from '../../mock/tours';
 
