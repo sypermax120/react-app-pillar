@@ -9,7 +9,7 @@ function Login() {
 
   const checkUser = {
     mail: '',
-    pass: '',
+    password: '',
   };
 
   return (
@@ -18,7 +18,7 @@ function Login() {
         <Form.Control type="mail" placeholder="Mail" onChange={(e) => (checkUser.mail = e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3 Password" controlId="formBasicPassword">
-        <Form.Control type="password" placeholder="Password" onChange={(e) => (checkUser.pass = e.target.value)} />
+        <Form.Control type="password" placeholder="Password" onChange={(e) => (checkUser.password = e.target.value)} />
       </Form.Group>
       <Button variant="primary" type="reset" onClick={() => { dispatch(loginUser(checkUser)); }}>Log in</Button>
     </Form>

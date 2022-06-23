@@ -23,7 +23,7 @@ function Header() {
           <Link to="../"><li>Home</li></Link>
           <Link to="../about"><li>About</li></Link>
           <Link to="../tours"><li>Tours</li></Link>
-          <Link to="../contact"><li>Contact</li></Link>
+          <Link to="../history"><li>History</li></Link>
           {
             authUser ? (
               <Link to="../admin">

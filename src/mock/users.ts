@@ -3,7 +3,8 @@ export interface IuserData{
   firstName: string,
   secondName: string,
   mail: string,
-  pass: string
+  password: string,
+  isAdmin: boolean,
 }
 
 export const userData = [
@@ -13,6 +14,7 @@ export const userData = [
     secondName: 'Maks',
     mail: 'admin',
     pass: 'admin',
+    isAdmin: true,
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ export const userData = [
     secondName: 'User1',
     mail: 'user2',
     pass: '1111',
+    isAdmin: true,
   },
   {
     id: 3,
@@ -27,5 +30,6 @@ export const userData = [
     secondName: 'User2',
     mail: 'user2',
     pass: '1111',
+    isAdmin: true,
   },
 ];
