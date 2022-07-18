@@ -54,7 +54,7 @@ function Admin() {
                     <Form.Control type="text" placeholder="Description" onChange={(e) => { newTour.description = e.target.value; }} />
                   </Form.Group>
                   <Form.Group className="mb-3 add-sort">
-                    <Button variant="primary" type="reset" onClick={() => { TourHistory(1), dispatch(onAdd(newTour)), dispatch(AddTour(newTour)) }}>Add Tour</Button>
+                    <Button variant="primary" type="reset" onClick={() => { TourHistory(1), dispatch(AddTour(newTour)) }}>Add Tour</Button>
                     <Button variant="primary" type="reset" onClick={() => { dispatch(sortByPrice()); }}>Sort Tour</Button>
                   </Form.Group>
                 </Form>
@@ -70,7 +70,11 @@ function Admin() {
                         {' '}
                         $
                       </Card.Text>
-                      <Button variant="primary" type="reset" onClick={() => { TourHistory(0), dispatch(onDeleteTour(tour.id)), dispatch(DeleteTour(tour.id)) }}>
+                      <Button variant="primary" type="reset" onClick={() => { 
+                        newTour.name = tour.name, 
+                        TourHistory(0), 
+                        dispatch(onDeleteTour(tour.id)), 
+                        dispatch(DeleteTour(tour.id)) }}>
                         Dell Tour
                         {tour.id}
                       </Button>

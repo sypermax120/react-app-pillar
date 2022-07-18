@@ -23,7 +23,8 @@ function Provider() {
     dispatch(setAuthUser(''));
   }, []);
 
-  const authUser = useSelector((state: RootState) => state.user.authUser);
+  // const authUser = useSelector((state: RootState) => state.user.authUser);
+  const isAdmin = useSelector((state: RootState) => state.user.isAdmin);
 
   return (
     <BrowserRouter>
@@ -34,7 +35,7 @@ function Provider() {
         <Route path="/tours" element={<Tours />} />
         <Route path="/tours/:id" element={<ToursDetail />} />
 
-        <Route path="/admin" element={authUser ? <Admin />: <Navigate to="/" replace />} />
+        <Route path="/admin" element={isAdmin ? <Admin />: <Navigate to="/" replace />} />
 
         <Route path="/history" element={<History />} />
         <Route path="/login" element={<div>5555</div>} />

@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux';
-import { createUser } from '../../reducers/userReducer';
+import { AddUser, createUser } from '../../reducers/userReducer';
 
 function Register() {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ function Register() {
     firstName: '',
     secondName: '',
     mail: '',
-    pass: '',
+    password: '',
   };
 
   return (
@@ -27,9 +27,9 @@ function Register() {
         <Form.Control type="mail" placeholder="Mail" onChange={(e) => (newUser.mail = e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3 Password" controlId="formBasicPassword">
-        <Form.Control type="password" placeholder="Password" onChange={(e) => (newUser.pass = e.target.value)} />
+        <Form.Control type="password" placeholder="Password" onChange={(e) => (newUser.password = e.target.value)} />
       </Form.Group>
-      <Button variant="primary" type="reset" onClick={() => { dispatch(createUser(newUser)); }}>Regiter</Button>
+      <Button variant="primary" type="reset" onClick={() => { dispatch(AddUser(newUser)); }}>Regiter</Button>
     </Form>
   );
 }

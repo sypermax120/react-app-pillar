@@ -31,22 +31,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(
-  name: string,
-  adminName: string,
-  createdAt: string,
-  type: string,
-) {
-  return { name, adminName, createdAt, type };
-}
-
 function History() {
-    const rows: any = [];
     const history = useSelector((state: RootState) => state.history.history);
-
-    history.map((element) => {
-        rows.push(createData(element.name, element.adminName, element.createdAt, element.type))
-    })
 
     return (
         <div className="App">
@@ -64,7 +50,7 @@ function History() {
                 </TableRow>
                 </TableHead>
                 <TableBody>
-                {rows.map((row: any) => (
+                {history.map((row: any) => (
                     <StyledTableRow key={row.name}>
                     <StyledTableCell component="th" scope="row">
                         {row.name}
