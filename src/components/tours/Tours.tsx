@@ -18,7 +18,7 @@ function Tours() {
         <Search />
           <div className="tours">
             {tours.length ? tours.map((tour: ItourData) => (
-              <Card style={{ width: '18rem' }}>
+              <Card key={tour.id} style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://img.rozavitriv.com/3/540x370/00/00/16/63/166325.jpg" />
                 <Card.Body>
                   <Card.Title>{tour.name}</Card.Title>

@@ -34,4 +34,9 @@
         margin: 20px;
       }
     }
+    
+    & .admin_btn{
+      display: flex;
+      justify-content: space-between;
+    }
   }

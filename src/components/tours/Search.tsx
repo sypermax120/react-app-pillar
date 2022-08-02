@@ -44,7 +44,7 @@ function Search() {
             <Form.Label>Country from</Form.Label>
             <Form.Select name="countryFrom" onChange={onChange} defaultValue="Choose country from...">
               <option>Choose...</option>
-              {countries.map((country) => <option>{country}</option>)}
+              {countries.map((country) => <option key={`from ${country}`}>{country}</option>)}
             </Form.Select>
           </Form.Group>
 
@@ -52,7 +52,7 @@ function Search() {
             <Form.Label>Country to</Form.Label>
             <Form.Select name="countryTo" onChange={onChange} defaultValue="Choose country to...">
               <option>Choose...</option>
-              {countries.map((country) => <option>{country}</option>)}
+              {countries.map((country) => <option key={`to ${country}`}>{country}</option>)}
             </Form.Select>
           </Form.Group>
         </Row>

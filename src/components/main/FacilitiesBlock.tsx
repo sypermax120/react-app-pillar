@@ -39,8 +39,8 @@ function FacilitiesBlock() {
         </div>
         <div className="info__facilities__image">
           {
-                        imageData.map((element) => <FacilitiesImage props={element} />)
-                    }
+            imageData.map((element) => <FacilitiesImage key={element.text} props={element} />)
+            }
         </div>
       </div>
 

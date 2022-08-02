@@ -32,8 +32,8 @@ function CityBlock() {
       <h1>Entire city of choice</h1>
       <div className="entire_city__section">
         {
-                    cityCards.map((element) => <HotelCard props={element} />)
-                }
+          cityCards.map((element) => <HotelCard key={element.id} props={element} />)
+          }
       </div>
       <div className="entire_city__bg" />
       <div className="entire_city__show_more" />

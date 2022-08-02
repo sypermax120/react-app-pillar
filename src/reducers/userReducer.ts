@@ -1,4 +1,3 @@
-// import { userData } from '../mock/users';
 import { IuserData } from '../mock/users';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import UsersAPI from '../api/user'

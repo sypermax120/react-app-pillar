@@ -62,9 +62,9 @@ export const tourSlice = createSlice({
     },
 
     filterTours: (state) => {
-      const temp = [...tourData.filter((tour) => tour.price >= state.searchValue.priceFrom
+      const temp = [...state.tours.filter((tour) => tour.price >= state.searchValue.priceFrom
         && tour.price <= state.searchValue.priceTo)];
-      state.tours = temp;
+      state.tours = temp;      
     },
   },
   extraReducers: {

@@ -32,14 +32,14 @@ function Header() {
                   <li className="header__login" onClick={() => { dispatch(exitUser()); setModalShow(false); }} aria-hidden="true">Exit</li>
                 </div>
               </Link>
+            ): 
+            (
+              <div>
+                <li className="header__login" onClick={() => setModalShow(true)} aria-hidden="true">Login</li>
+                <Registration show={modalShow} onHide={() => setModalShow(false)} />
+              </div>
             )
-              : (
-                <div>
-                  <li className="header__login" onClick={() => setModalShow(true)} aria-hidden="true">Login</li>
-                  <Registration show={modalShow} onHide={() => setModalShow(false)} />
-                </div>
-              )
-        }
+          }
         </ul>
         <div className='burger' id='burger' onClick={ToggleClass}>
           <i></i>

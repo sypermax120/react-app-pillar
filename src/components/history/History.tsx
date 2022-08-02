@@ -51,13 +51,13 @@ function History() {
                 </TableHead>
                 <TableBody>
                 {history.map((row: any) => (
-                    <StyledTableRow key={row.name}>
-                    <StyledTableCell component="th" scope="row">
-                        {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="right">{row.adminName}</StyledTableCell>
-                    <StyledTableCell align="right">{row.createdAt}</StyledTableCell>
-                    <StyledTableCell align="right">{row.type}</StyledTableCell>
+                    <StyledTableRow key={row.id}>
+                      <StyledTableCell component="th" scope="row">
+                          {row.name}
+                      </StyledTableCell>
+                      <StyledTableCell align="right">{row.adminName}</StyledTableCell>
+                      <StyledTableCell align="right">{row.createdAt}</StyledTableCell>
+                      <StyledTableCell align="right">{row.type}</StyledTableCell>
                     </StyledTableRow>
                 ))}
                 </TableBody>
